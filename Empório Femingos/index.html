@@ -210,7 +210,7 @@
     <div class="album py-5 bg-light">
         <div class="container">
          <div class="row" ng-controller="Rest">
-            <div class="col-md-4" ng-repeat="publicacao in publicacoes">
+            <div class="col-md-4" ng-repeat="(key, publicacao) in publicacoes">
               <div class="card mb-4 shadow-sm">
                 <img ng-src="https://api-fake-blog.herokuapp.com{{ publicacao.thumbImage }}" >
                 <div class="card-body">
@@ -218,6 +218,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <small class="text-muted">{{ publicacao.description }}</small>
                   </div>
+                  <a href="publicacao.html#{{ key + 1 }}"><p style="color: black;">Ler mais</p></a>
                 </div>
               </div>
             </div>
